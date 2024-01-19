@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 5em;
+    margin: 0;
+}
+
+p {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+::selection {
+    background-color: #882dff;
+    color: #ffffff;
+}

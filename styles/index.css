@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url('../font/minecraft-font.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Minecraft", sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: #1D1E23;
+    overflow-y: hidden;
+}
+
+.speech-bubble {
+    background: #fff url('img/ok.jpg') no-repeat;
+    background-size: contain;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    display: inline-block;
+    width: auto; 
+    height: 75px;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0;
+    border-color: #fff transparent transparent transparent;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.arrow img {
+    max-width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -400px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h1 {
+    color: #000;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h1 span {
+    position: relative;
+}
+
+h1 span::before {
+    content: "";
+    height: 30px;
+    width: 2px;
+    position: absolute;
+    top: 130%;
+    right: -1px;
+    background: #000;
+    transform: translateY(-45%);
+    animation: blink 0.7s infinite;
+}
+
+h1 span.stop-blinking::before {
+    animation: none;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+footer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #1D1E23;
+    padding: 10px;
+    text-align: center;
+    font-size: 10px;
+}
+
+@media (max-width: 768px) {
+    .speech-bubble {
+        width: 100%;
+        height: auto;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    footer {
+        font-size: 14px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+    .arrow img {
+        max-width: auto;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    #runString {
+        padding-top: 10px;
+        text-align: center;
+    }
+    
+    
+}
+
+#runString {
+    padding-top: 10px;
+}
+
+::selection {
+    background-color: #882dff;
+    color: #ffffff; 
+  }

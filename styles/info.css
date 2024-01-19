@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'arial';
+    src: url('../font/arial.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: #000000;
+    color: #ffffff;
+    font-family: 'arial', courier;
+    font-size: 12pt;
+}
+
+::selection {
+    background-color: #882dff; 
+    color: #ffffff;
+  }
